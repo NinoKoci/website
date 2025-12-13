@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+    <h1>{{ title }}</h1>
+
+    <p>
+        If you would like to get in touch with me, please feel free to reach out using the
+        contact information below or by filling out the contact form.
+        I am always looking for collaborators or feedback on my projects.
+    </p>
+
+    <h2>Contact Information</h2>
+
+    <p>Email:
+        <a href="mailto:ninokoci@hotmail.com">ninokoci@hotmail.com</a>
+    </p>
+
+    <p>LinkedIn:
+        <a href="https://www.linkedin.com/in/kostandino-k-680353143/" target="_blank">
+            linkedin.com/in/kostandino-k-680353143/
+        </a>
+    </p>
+
+    <p>GitHub:
+        <a href="https://github.com/NinoKoci" target="_blank">
+            github.com/NinoKoci
+        </a>
+    </p>
+</section>
+
+
+<section class="contact-box">
+    <h2 class="text-center">Contact Form</h2>
+
+    <form action="https://formspree.io/f/yourformid" method="POST">
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="_replyto" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Send</button>
+
+    </form>
+</section>
+
+{% endblock %}
+
