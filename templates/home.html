@@ -5,30 +5,42 @@
 <section class="hero">
     <h1>{{ title }}</h1>
     <p>Hello everyone, and welcome to my portfolio website!!</p>
-    <ul>I’m Nino, a molecular biologist that has recently branched into coding. Here you can explore my projects, experience, and skills.
-        I decided to make this website to tesst my skills in coding and have a nicer place where I can describe my work throughout my tenure in the phasrmaceutical industry and my time at Tufts.
-        My intention is to keep updating this site as I complete new projects and learn new skills, so don't be shocked if new content appears.
-        Ultmaley my goal is to present my work in a clear and engaging way for future PhD applications or potential collaborations.
-         Feel free to browse around my projects and reach out if you have any questions, feedback or opportunities. 
+    <ul>I’m Nino, a molecular biologist who has recently branched into coding. Here you can explore my projects, experience, and skills.
+        <div class="image">
+            <img src="/static/profile_picture.jpg"  class="img-fluid rounded-circle mx-auto d-block">
+            <p class="text-center mt-2">Here is me durig my most recet trip!</p>
+        </div>
+
+        I decided to make this website to test my coding skills and to have a nicer place to describe my work throughout my tenure in the pharmaceutical industry and my time at Tufts.
+        I intend to keep updating this site as I complete new projects and learn new skills, so don't be shocked if new content appears.
+        Ultimately, my goal is to present my work clearly and engagingly for future PhD applications or potential collaborations.
+         Feel free to browse around my projects and reach out if you have any questions, feedback, or opportunities.
     </ul>
 </section>
 
-<section class="quick-links">
-    <h2>Explore</h2>
-    <ul>
-        <li><a href="/about">About Me</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contact">Contact Me</a></li>
-    </ul>
+
+
+<section class="featured-projects">
+    <h2>Featured Projects</h2>
+
+    <div class="featured-project-1">
+        <a class="card-link" href="{{ url_for('static', filename='Firefly Luciferase Quantification Assay.pdf') }}">
+            <h3>Firefly Luciferase Quantification Assay</h3>
+        </a>
+    </div>
+
+    <div class = "featured-project-2">
+        <a class="card-link" href= "{{ url_for('static', filename='PK_PD_Model_NK_final.html') }} ">
+            <h3>Two-Compartment PK Model of R-Ibuprofen</h3>
+        </a>
+    </div>
+
+    <div class = "featured-project-3">
+        <a class="card-link" href= "{{ url_for('static', filename='Rimfapin_PBPK.html') }} ">
+            <h3>One-Compartment PK/PD Model of Rifampin</h3>
+        </a>
+    </div>
 </section>
-
-<section class="image">
-    <img src="/static/profile_picture.jpg"  class="img-fluid rounded-circle mx-auto d-block">
-    <p class="text-center mt-2">Here is me durig my most recet trip!</p>
-</section>
-
-
-
 
 
 {% endblock %}

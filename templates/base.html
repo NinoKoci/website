@@ -27,32 +27,39 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
-    <main class="container my-5">
-        {% block content %}
-        {% endblock %}
-    </main>
+    <!-- PAGE LAYOUT WITH WALLPAPERS -->
+    <div class="page-layout">
 
-    <!-- Bootstrap JS Bundle -->
+        <!-- LEFT WALLPAPER -->
+        <div class="side-wallpaper left-wallpaper"></div>
+        
+
+        <!-- MAIN CONTENT (UNCHANGED FUNCTIONALLY) -->
+        <main class="container my-5 main-content">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <!-- RIGHT WALLPAPER -->
+         
+        <div class="side-wallpaper right-wallpaper"></div>
+        
+
+    </div>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
+
 
