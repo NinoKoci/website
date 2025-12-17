@@ -12,7 +12,7 @@
 /* Body */
 body {
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(173, 164, 140, 0.482);
     color: #222;
     line-height: 1.6;
 }
@@ -52,24 +52,117 @@ p {
     padding: 20px;
 }
 
+
+/* ==========================
+   SIDE WALLPAPERS
+   ========================== */
+
+.side-wallpaper {
+    background-position: top;
+    background-repeat: repeat-y;
+    z-index: -1;
+    pointer-events: none;
+    background-size: 40% auto; 
+}
+
+
+
+/* Left wallpaper */
+.left-wallpaper {
+    position: left;
+    background-image: url("banner-L.png");
+    background-position: left;
+}
+
+/* Right wallpaper */
+.right-wallpaper {
+    position: right;
+    background-position: right;
+    background-image: url("banner-R.png");
+}
+
+/* ==========================
+   PAGE LAYOUT
+   ========================== */
+
+.page-layout {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+    min-height: 100vh;
+}
+
+/* Main content stays centered */
+.main-content {
+    width: 100%;
+}
+
 /* ==========================
    NAVBAR
    ========================== */
 .navbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid #ddd;
+    background-color: #d713137c;
+    border-bottom: 1px solid #000000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
+.navbar {
+    background-image: url("navbar.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.71); /* dark overlay */
+    z-index: 0;
+}
+.navbar * {
+    position: relative;
+    z-index: 1;
+}
+
 .navbar .nav-link {
-    color: #000000;
-    font-weight: 600;
-    margin-right: 10px;
+    color: #000000 !important;       /* Make them white or bright color */
+    font-weight: 1000;                /* Bold */
+    font-size: 1.5rem;               /* Slightly larger */
+    margin-left: 15px;               /* Space between links */
+}
+
+/* Hover effect */
+.navbar .nav-link:hover {
+    color: #000000d2 !important;       /* Highlight on hover */
+    text-decoration: underline;      /* Optional */
+}
+
+.navbar .nav-link {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 .navbar .nav-link:hover {
-    text-decoration: underline;
-    color: #000000;
+    background-color: rgba(255, 255, 255, 0.42); /* Semi-transparent highlight */
+    color: #000000d4 !important;
+}
+.navbar .nav-link {
+    position: relative;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000000d4;
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
 }
 
 .navbar .navbar-brand {
@@ -105,21 +198,21 @@ p {
 
 /* Hero Links / Buttons */
 .hero a {
-    color: #0055ff;
+    color: #a91010d4;
     font-weight: 600;
     text-decoration: none;
     transition: 0.2s;
 }
 
 .hero a:hover {
-    color: #003bb3;
+    color: #a91010d4;
     text-decoration: underline;
 }
 
 .hero .btn-hero {
     display: inline-block;
     padding: 12px 25px;
-    background-color: #0055ff;
+    background-color: #a91010d4;
     color: white;
     border-radius: 8px;
     font-weight: 600;
@@ -152,10 +245,139 @@ p {
     transition: 0.2s;
 }
 
+.quick-links h2 {
+    text-align: center;
+    font-weight: 600;
+    color: #000000;
+    transition: 0.2s;
+}
+
 .quick-links li a:hover {
     color: #000000;
     text-decoration: underline;
 }
+
+/* ==========================
+   FEATURED PROJECTS GRID
+   ========================== */
+
+.featured-projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto; /* centers grid */
+}
+
+/* Section title */
+.featured-projects h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* ==========================
+   CARD BASE STYLES
+   ========================== */
+
+.featured-project-1,
+.featured-project-2,
+.featured-project-3 {
+    aspect-ratio: 1 / 1;              /* square cards */
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(160, 204, 231, 0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    /* CENTER CONTENT */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Hover effect */
+.featured-project-1:hover,
+.featured-project-2:hover,
+.featured-project-3:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================
+   BACKGROUND IMAGES
+   ========================== */
+
+.featured-project-1 {
+    background: url("firefly.png") center / cover no-repeat;
+}
+
+.featured-project-2 {
+    background: url("ibuprofen.png") center / cover no-repeat;
+}
+
+.featured-project-3 {
+    background: url("Rimfapin.png") center / cover no-repeat;
+}
+
+/* ==========================
+   DARK OVERLAY
+   ========================== */
+
+.featured-project-1::before,
+.featured-project-2::before,
+.featured-project-3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 12, 12, 0.45);
+    z-index: 1;
+}
+
+/* ==========================
+   CARD CONTENT
+   ========================== */
+
+.card-link {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+
+    color: #fff;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    text-decoration: none;
+}
+
+/* Typography */
+.featured-projects h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fffefe;
+    margin: 0;
+}
+
+.featured-projects p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 90%;
+}
+
 
 /* ==========================
    PROJECTS PAGE
@@ -190,11 +412,11 @@ p {
 
 .projects .project a {
     font-weight: 600;
-    color: #0055ff;
+    color: #ae1a1ac7;
 }
 
 .projects .project a:hover {
-    color: #003bb3;
+    color: #ae1a1ac7;
     text-decoration: underline;
 }
 
@@ -344,7 +566,7 @@ p {
 }
 
 .contact-box button {
-    background: #0055ff;
+    background: #b81d1db1;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -357,7 +579,7 @@ p {
 }
 
 .contact-box button:hover {
-    background-color: #003bb3;
+    background-color: #b81d1db1;
 }
 
 /* ==========================
@@ -390,5 +612,20 @@ p {
     .about-page h2,
     .contact-box h2 {
         font-size: 1.5rem;
+    }
+}
+
+
+/* ==========================
+   RESPONSIVE (MOBILE)
+   ========================== */
+
+@media (max-width: 992px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .side-wallpaper {
+        display: none;
     }
 }
