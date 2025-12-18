@@ -12,27 +12,27 @@
 /* Body */
 body {
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-    background-color: rgba(173, 164, 140, 0.482);
+    background-color: rgb(250, 250, 250);
     color: #222;
     line-height: 1.6;
 }
 
 /* Links */
 a {
-    color: #000000;
+    color: #6c9dba;
     text-decoration: none;
     transition: 0.2s;
 }
 
 a:hover {
-    color: #000000;
+    color: #1352d1c6;
     text-decoration: underline;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6, p {
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-    color: #222;
+    color: #0d64c79f;
     font-weight: 600;
     margin-bottom: 15px;
 }
@@ -42,7 +42,7 @@ p {
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     margin-bottom: 15px;
     font-size: 1.1rem;
-    color: #000000;
+    color: #67a1d0b6;
 }
 
 /* Container */
@@ -62,7 +62,7 @@ p {
     background-repeat: repeat-y;
     z-index: -1;
     pointer-events: none;
-    background-size: 40% auto; 
+    background-size: 70% auto; 
 }
 
 
@@ -100,13 +100,13 @@ p {
    NAVBAR
    ========================== */
 .navbar {
-    background-color: #d713137c;
+    background-color: #347ce9c1;
     border-bottom: 1px solid #000000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .navbar {
-    background-image: url("navbar.png");
+    background-image: url("navbar-2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -116,7 +116,7 @@ p {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.71); /* dark overlay */
+    background: rgba(255, 255, 255, 0.534); /* dark overlay */
     z-index: 0;
 }
 .navbar * {
@@ -125,7 +125,7 @@ p {
 }
 
 .navbar .nav-link {
-    color: #000000 !important;       /* Make them white or bright color */
+    color: #1641b7b4 !important;       /* Make them white or bright color */
     font-weight: 1000;                /* Bold */
     font-size: 1.5rem;               /* Slightly larger */
     margin-left: 15px;               /* Space between links */
@@ -133,9 +133,10 @@ p {
 
 /* Hover effect */
 .navbar .nav-link:hover {
-    color: #000000d2 !important;       /* Highlight on hover */
+    color: #67a1d0b6 !important;       /* Highlight on hover */
     text-decoration: underline;      /* Optional */
 }
+
 
 .navbar .nav-link {
     padding: 5px 10px;
@@ -144,8 +145,8 @@ p {
 }
 
 .navbar .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.42); /* Semi-transparent highlight */
-    color: #000000d4 !important;
+    background-color: rgba(145, 200, 236, 0.655); /* Semi-transparent highlight */
+    color: #2f96eaca !important;       /* Make them white or bright color */
 }
 .navbar .nav-link {
     position: relative;
@@ -198,14 +199,14 @@ p {
 
 /* Hero Links / Buttons */
 .hero a {
-    color: #a91010d4;
+    color: #618cdbb6;       /* Highlight on hover */
     font-weight: 600;
     text-decoration: none;
     transition: 0.2s;
 }
 
 .hero a:hover {
-    color: #a91010d4;
+    color:  #4779bee4;
     text-decoration: underline;
 }
 
@@ -274,7 +275,7 @@ p {
     grid-column: 1 / -1;
     text-align: center;
     font-weight: 700;
-    color: #000;
+    color: #618cdbb6;
     margin-bottom: 30px;
     font-size: 2rem;
 }
@@ -399,6 +400,7 @@ p {
 }
 
 .projects .project h3 {
+    color: #618cdbb6;     
     margin-bottom: 10px;
     font-size: 1.3rem;
 }
@@ -412,11 +414,11 @@ p {
 
 .projects .project a {
     font-weight: 600;
-    color: #ae1a1ac7;
+    color:  #4560c1e4;
 }
 
 .projects .project a:hover {
-    color: #ae1a1ac7;
+    color:  #4779bee4;
     text-decoration: underline;
 }
 
@@ -446,7 +448,7 @@ p {
     list-style: disc;
     padding-left: 25px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #000000ff;
+    border-bottom: 1px solid #618cdbb6;
 }
 
 .skills li, .education li, .experience li {
@@ -465,7 +467,7 @@ p {
 }
 
 .education{
-    border-bottom: 1px solid #000000ff;
+    border-bottom: 1px solid #618cdbb6;
     
 }
 /* --- Experience Section --- */
@@ -483,12 +485,13 @@ p {
 .job {
     margin-bottom: 25px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #000000ff;
+    border-bottom: 1px solid #618cdbb6;
 }
 
 /* Job title */
 .job-title {
     font-weight: bold;
+    color: #436fde8d;
     font-size: 1.25rem;
     margin-top: 15px;
     margin-bottom: 2px;
@@ -496,23 +499,22 @@ p {
 
 .job-period {
     font-style: normal;
-    font-size: 15px;
-    color: #000000;
-    margin-left: 20px; /* increase space from job title */
+     color: #436fde8d;
+    margin-left: 20px;
 }
 
 /* Company name */
 .company {
+    color: #94c2e6d7;
     font-style: italic;
     font-size: 15px;
-    color: #0a0a0a;
 }
 
 /* Location */
 .location {
     font-style: normal;
-    font-size: 15px;
-    color: #000000;
+    color: #94c2e6d7;
+    margin-left: 20px;
 }
 
 /* Job description list */
@@ -525,6 +527,13 @@ p {
     line-height: 1.5;
 }
 
+.img-breaker {
+    display: block;
+    height: 50px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 60px auto;
+}
 
 /* ==========================
    CONTACT PAGE
